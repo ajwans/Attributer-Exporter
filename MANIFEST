@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Attribute-Exporter.t
+t/t.pm
+lib/Attribute/Exporter.pm
