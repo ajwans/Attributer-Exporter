@@ -7,6 +7,7 @@ no warnings;
 use FindBin;
 use lib "$FindBin::Bin/.";
 use lib "$FindBin::Bin/..";
+use lib "$FindBin::Bin/../lib";
 
 BEGIN {
   $Attribute::Exporter::Verbose = 0;
