@@ -208,7 +208,7 @@ sub _MODIFY_ATTRIBUTES {
 	my $export_ok_attr = delete($attrs{export_ok});
 	my @export_tag_attrs;
 	for my $attr (keys(%attrs)) {
-		if (my ($tag) = $attr =~ m/^export_tag\(([^)])\)$/) {
+		if (my ($tag) = $attr =~ m/^export_tag\(([^)]+)\)$/) {
 			if ($tag eq 'DEFAULT' || $tag eq 'OK') {
 				carp "using $tag as an export tag clobbers internal $tag";
 			}
