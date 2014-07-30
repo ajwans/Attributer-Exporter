@@ -12,7 +12,7 @@ my %export_ok;
 my $export_tags;
 
 our $Verbose ||= 0;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our $use_indirection ||= 0;
 
 sub export_constant {
