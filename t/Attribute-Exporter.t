@@ -9,11 +9,7 @@ use lib "$FindBin::Bin/.";
 use lib "$FindBin::Bin/..";
 use lib "$FindBin::Bin/../lib";
 
-BEGIN {
-  $Attribute::Exporter::Verbose = 0;
-}
-
-use Test::Simple tests => 19;
+use Test::Simple tests => 23;
 
 reload_module();
 
@@ -32,6 +28,13 @@ ok(*{'::test2'}{CODE} == *{'t::test2'}{CODE}, 't exported test2 to main');
 # test scalar export
 reload_module('$test5');
 ok($main::test5 eq 'test5', 'scalar import ok');
+
+# test tag export
+reload_module(':test10_tag');
+ok(defined(*{'t::test10'}{CODE}), 't::test10 is defined');
+ok(defined(*{'main::test10'}{CODE}), 'main::test10 is defined');
+ok(*{'::test10'}{CODE} == *{'t::test10'}{CODE}, 't exported test10 to main');
+ok(test10() eq 'test10', 'test10 result OK');
 
 $Attribute::Exporter::use_indirection = 1;
 

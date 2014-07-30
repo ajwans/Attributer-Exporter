@@ -3,6 +3,10 @@ package t;
 use strict;
 no warnings;
 
+BEGIN {
+	$Attribute::Exporter::Verbose = 2;
+};
+
 use base 'Attribute::Exporter';
 
 use constant test8 => 'test8';
@@ -29,6 +33,10 @@ sub test3 {
 
 sub test4 :export_ok {
   return $_[0];
+}
+
+sub test10 :export_tag(test10_tag) {
+	return 'test10';
 }
 
 sub redefine {

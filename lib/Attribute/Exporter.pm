@@ -396,7 +396,7 @@ data types although support for ARRAY and HASH is straighforward to add.
 
 =head1 AUTHOR
 
-Andrew Wansink E<lt>ajwans@opera.comE<gt>
+Andrew Wansink E<lt>andy@halogix.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
